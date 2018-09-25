@@ -1,0 +1,189 @@
+<meta charset="UTF-8" />
+<script id="resume-template" type="text/x-handlebars-template">
+
+  {{#with heading}}
+  {{#if showSection}}
+  <div class="heading">
+    {{#with content}}
+    <div class="name">{{name}}</div>
+    <div class="subtitle">{{subtitle}}</div>
+    <div class="contactinfo">
+      <div class="email">{{email}}</div>
+      <div class="linked-in">{{linkedIn}}</div>
+      <div class="phone">{{phone}}</div>
+    </div>
+    {{/with}}
+  </div>
+  {{/if}}
+  {{/with}}
+
+
+  {{#with objective}}
+  {{#if showSection}}
+  <div class="objective">
+    {{#with content}}
+    {{#each descriptionsList}}
+    <div class="description">{{this}}</div>
+    {{/each}}
+    {{/with}}
+  </div>
+  {{/if}}
+  {{/with}}
+
+
+  {{#with education}}
+  {{#if showSection}}
+    <div class="educations">
+      {{#with content}}
+      {{#each educationList}}
+      <div class="education">
+        <div class="school">{{name}}</div>
+        <div class="city">{{city}}</div>
+        <div class="degree">{{degree}}</div>
+        <div class="graduation-date">{{gradDate}}</div>
+        <div class="GPA">{{gpa}}</div>
+        <div class="honors">{{honors}}</div>
+        <div class="deans-list">{{deansList}}</div>
+      </div>
+      {{/each}}
+      {{/with}}
+    </div>
+  {{/if}}
+  {{/with}}
+
+  {{#with projects}}
+  {{#if showSection}}
+  <div class="projects">
+    {{#with content}}
+    {{#each projectsList}}
+    <div class="project">
+      <div class="project-info">
+        <div class="project-name">{{projInfo.projName}}</div>
+        <div class="positions">{{projInfo.position}}</div>
+        <div class="start-end">{{projInfo.startEnd}}</div>
+        <div class="location">{{projInfo.location}}</div>
+      </div>
+      <div class="descriptions">
+        {{#each descriptions}}
+        <div class="description">{{this}}</div>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+    {{/with}}
+  </div>
+  {{/if}}
+  {{/with}}
+
+
+  {{#with leadership}}
+  {{#if showSection}}
+  <div class="leadership">
+    {{#with content}}
+    {{#each leadershipsList}}
+    <div class="organization">
+      <div class="organization-info">
+        <div class="organization-name">{{organizationInfo.organizationName}}</div>
+        <div class="position">{{organizationInfo.position}}</div>
+        <div class="time-start-end">{{organizationInfo.startEnd}}</div>
+        <div class="location">{{organizationInfo.location}}</div>
+      </div>
+      <div class="descriptions">
+        {{#each descriptions}}
+        <div class="description">{{this}}</div>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+    {{/with}}
+  </div>
+  {{/if}}
+  {{/with}}
+
+
+  {{#with work}}
+  {{#if showSection}}
+  <div class="work">
+    {{#with content}}
+    {{#each jobsList}}
+    <div class="job">
+      <div class="job-info">
+        <div class="title">{{jobInfo.title}}</div>
+        <div class="company">{{jobInfo.company}}</div>
+        <div class="time-start-end">{{jobInfo.startEnd}}</div>
+        <div class="location">{{jobInfo.location}}</div>
+      </div>
+      <div class="descriptions">
+        {{#each descriptions}}
+        <div class="description">{{this}}</div>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+    {{/with}}
+  </div>
+  {{/if}}
+  {{/with}}
+
+  {{#with skills}}
+  {{#if showSection}}
+  <div class="skills">
+    {{#each skillsList}}
+    <div class="skill">
+      <div class="skill-level">{{skillLevel}}</div>
+      <div class="descriptions">
+        {{#each descriptions}}
+        <div class="description">{{this}}</div>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+  {{/with}}
+
+
+  {{#with awards}}
+  {{#if showSection}}
+  <div class="awards">
+    {{#with content}}
+    {{#each awardsList}}
+    <div class="award">
+      <div class="award-name">{{awardName}}</div>
+      <div class="time">{{time}}</div>
+      <div class="descriptions">
+        {{#each descriptions}}
+        <div class="description">{{this}}</div>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+    {{/with}}
+  </div>
+  {{/if}}
+  {{/with}}
+
+  {{#with references}}
+  {{#if showSection}}
+  <div class="references">
+    {{#with content}}
+    {{#each referencesList}}
+    <div class="contact">
+      <div class="name">{{name}}</div>
+      <div class="position">{{position}}</div>
+      <div class="company">{{company}}</div>
+      <div class="phone">{{phone}}</div>
+      <div class="email">{{email}}</div>
+      <div class="address">{{address}}</div>
+    </div>
+    {{/each}}
+    {{/with}}
+
+  </div>
+  {{/if}}
+  {{/with}}
+
+</script>
+<script type='text/javascript' src='./js/lib/jquery.3.3.1.min.js'></script>
+<script type='text/javascript' src='./js/lib/handlebars.min-latest.js'></script>
+<script type='text/javascript' src='./js/config.js'></script>
